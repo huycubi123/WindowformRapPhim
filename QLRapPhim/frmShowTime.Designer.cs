@@ -49,6 +49,10 @@
             this.cmbFilmID = new System.Windows.Forms.ComboBox();
             this.cmbCinemaID = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbNote = new System.Windows.Forms.Label();
+            this.btnAddDB = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateDB = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteDB = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowTime)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,7 +74,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnChange);
             this.panel1.Controls.Add(this.btnAdd);
@@ -91,7 +94,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnCancel.Location = new System.Drawing.Point(0, 360);
+            this.btnCancel.Location = new System.Drawing.Point(0, 359);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(175, 40);
             this.btnCancel.TabIndex = 24;
@@ -100,7 +103,6 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BorderRadius = 22;
             this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -108,9 +110,9 @@
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(0, 280);
+            this.btnSearch.Location = new System.Drawing.Point(581, 359);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(175, 40);
+            this.btnSearch.Size = new System.Drawing.Size(159, 30);
             this.btnSearch.TabIndex = 23;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
@@ -127,7 +129,7 @@
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageOffset = new System.Drawing.Point(-10, 0);
             this.btnDelete.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDelete.Location = new System.Drawing.Point(0, 200);
+            this.btnDelete.Location = new System.Drawing.Point(0, 267);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(175, 40);
             this.btnDelete.TabIndex = 22;
@@ -145,7 +147,7 @@
             this.btnChange.ForeColor = System.Drawing.Color.White;
             this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
             this.btnChange.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnChange.Location = new System.Drawing.Point(0, 120);
+            this.btnChange.Location = new System.Drawing.Point(0, 175);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(175, 40);
             this.btnChange.TabIndex = 21;
@@ -164,7 +166,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageOffset = new System.Drawing.Point(-5, 0);
             this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdd.Location = new System.Drawing.Point(0, 40);
+            this.btnAdd.Location = new System.Drawing.Point(2, 83);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(175, 40);
             this.btnAdd.TabIndex = 20;
@@ -175,6 +177,7 @@
             // 
             this.lbShowTimeID.AutoSize = true;
             this.lbShowTimeID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbShowTimeID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbShowTimeID.Location = new System.Drawing.Point(220, 201);
             this.lbShowTimeID.Name = "lbShowTimeID";
             this.lbShowTimeID.Size = new System.Drawing.Size(80, 24);
@@ -185,6 +188,7 @@
             // 
             this.lbShowTime.AutoSize = true;
             this.lbShowTime.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbShowTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbShowTime.Location = new System.Drawing.Point(614, 201);
             this.lbShowTime.Name = "lbShowTime";
             this.lbShowTime.Size = new System.Drawing.Size(126, 24);
@@ -195,6 +199,7 @@
             // 
             this.lbFilmID.AutoSize = true;
             this.lbFilmID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFilmID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbFilmID.Location = new System.Drawing.Point(220, 252);
             this.lbFilmID.Name = "lbFilmID";
             this.lbFilmID.Size = new System.Drawing.Size(77, 24);
@@ -205,6 +210,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(614, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 24);
@@ -215,6 +221,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(220, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 24);
@@ -225,6 +232,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(614, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 24);
@@ -295,13 +303,73 @@
             this.panel2.Size = new System.Drawing.Size(884, 133);
             this.panel2.TabIndex = 19;
             // 
+            // lbNote
+            // 
+            this.lbNote.AutoSize = true;
+            this.lbNote.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbNote.Location = new System.Drawing.Point(383, 373);
+            this.lbNote.Name = "lbNote";
+            this.lbNote.Size = new System.Drawing.Size(176, 16);
+            this.lbNote.TabIndex = 24;
+            this.lbNote.Text = "Nhập các trường để tìm kiếm";
+            // 
+            // btnAddDB
+            // 
+            this.btnAddDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddDB.ForeColor = System.Drawing.Color.White;
+            this.btnAddDB.Location = new System.Drawing.Point(830, 357);
+            this.btnAddDB.Name = "btnAddDB";
+            this.btnAddDB.Size = new System.Drawing.Size(122, 32);
+            this.btnAddDB.TabIndex = 79;
+            this.btnAddDB.Text = "Thêm";
+            this.btnAddDB.Click += new System.EventHandler(this.btnAddDB_Click);
+            // 
+            // btnUpdateDB
+            // 
+            this.btnUpdateDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdateDB.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateDB.Location = new System.Drawing.Point(830, 357);
+            this.btnUpdateDB.Name = "btnUpdateDB";
+            this.btnUpdateDB.Size = new System.Drawing.Size(122, 32);
+            this.btnUpdateDB.TabIndex = 80;
+            this.btnUpdateDB.Text = "Sửa";
+            this.btnUpdateDB.Click += new System.EventHandler(this.btnUpdateDB_Click);
+            // 
+            // btnDeleteDB
+            // 
+            this.btnDeleteDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeleteDB.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDB.Location = new System.Drawing.Point(830, 357);
+            this.btnDeleteDB.Name = "btnDeleteDB";
+            this.btnDeleteDB.Size = new System.Drawing.Size(122, 32);
+            this.btnDeleteDB.TabIndex = 81;
+            this.btnDeleteDB.Text = "Xóa";
+            this.btnDeleteDB.Click += new System.EventHandler(this.btnDeleteDB_Click);
+            // 
             // frmShowTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1064, 442);
+            this.Controls.Add(this.btnDeleteDB);
+            this.Controls.Add(this.btnUpdateDB);
+            this.Controls.Add(this.btnAddDB);
+            this.Controls.Add(this.lbNote);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cmbCinemaID);
             this.Controls.Add(this.cmbFilmID);
             this.Controls.Add(this.dtpShowTime);
@@ -315,7 +383,7 @@
             this.Controls.Add(this.lbShowTime);
             this.Controls.Add(this.lbShowTimeID);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "frmShowTime";
             this.Text = "frmShowTime";
             this.Load += new System.EventHandler(this.frmShowTime_Load);
@@ -349,5 +417,9 @@
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private System.Windows.Forms.Label lbNote;
+        private Guna.UI2.WinForms.Guna2Button btnAddDB;
+        private Guna.UI2.WinForms.Guna2Button btnUpdateDB;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteDB;
     }
 }

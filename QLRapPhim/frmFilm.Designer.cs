@@ -46,6 +46,14 @@
             this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbFilmID = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.lbFilmIDSearch = new System.Windows.Forms.Label();
+            this.lbFilmID = new System.Windows.Forms.Label();
+            this.txtFilmID = new System.Windows.Forms.TextBox();
+            this.btnAddDB = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateDB = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteDB = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilm)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,7 +76,8 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(254, 195);
+            this.lbName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbName.Location = new System.Drawing.Point(256, 237);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(74, 24);
             this.lbName.TabIndex = 1;
@@ -78,7 +87,8 @@
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(627, 243);
+            this.lbPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbPrice.Location = new System.Drawing.Point(630, 293);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(109, 24);
             this.lbPrice.TabIndex = 3;
@@ -88,7 +98,8 @@
             // 
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.Location = new System.Drawing.Point(627, 195);
+            this.lbDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbDate.Location = new System.Drawing.Point(630, 237);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(132, 24);
             this.lbDate.TabIndex = 4;
@@ -98,7 +109,8 @@
             // 
             this.lbDirector.AutoSize = true;
             this.lbDirector.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDirector.Location = new System.Drawing.Point(254, 297);
+            this.lbDirector.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbDirector.Location = new System.Drawing.Point(630, 181);
             this.lbDirector.Name = "lbDirector";
             this.lbDirector.Size = new System.Drawing.Size(76, 24);
             this.lbDirector.TabIndex = 5;
@@ -108,7 +120,8 @@
             // 
             this.lbLanguage.AutoSize = true;
             this.lbLanguage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLanguage.Location = new System.Drawing.Point(254, 243);
+            this.lbLanguage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbLanguage.Location = new System.Drawing.Point(256, 293);
             this.lbLanguage.Name = "lbLanguage";
             this.lbLanguage.Size = new System.Drawing.Size(83, 24);
             this.lbLanguage.TabIndex = 6;
@@ -117,7 +130,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(362, 192);
+            this.txtName.Location = new System.Drawing.Point(364, 234);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(221, 30);
             this.txtName.TabIndex = 7;
@@ -125,7 +138,7 @@
             // txtLanguage
             // 
             this.txtLanguage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLanguage.Location = new System.Drawing.Point(362, 240);
+            this.txtLanguage.Location = new System.Drawing.Point(364, 290);
             this.txtLanguage.Name = "txtLanguage";
             this.txtLanguage.Size = new System.Drawing.Size(221, 30);
             this.txtLanguage.TabIndex = 8;
@@ -133,7 +146,7 @@
             // txtDirector
             // 
             this.txtDirector.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirector.Location = new System.Drawing.Point(362, 294);
+            this.txtDirector.Location = new System.Drawing.Point(785, 178);
             this.txtDirector.Name = "txtDirector";
             this.txtDirector.Size = new System.Drawing.Size(221, 30);
             this.txtDirector.TabIndex = 9;
@@ -141,7 +154,7 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(764, 240);
+            this.txtPrice.Location = new System.Drawing.Point(785, 290);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(221, 30);
             this.txtPrice.TabIndex = 10;
@@ -150,7 +163,7 @@
             // 
             this.dtpDate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(765, 190);
+            this.dtpDate.Location = new System.Drawing.Point(785, 234);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(220, 30);
             this.dtpDate.TabIndex = 11;
@@ -249,12 +262,120 @@
             this.panel2.Size = new System.Drawing.Size(884, 133);
             this.panel2.TabIndex = 16;
             // 
+            // cmbFilmID
+            // 
+            this.cmbFilmID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFilmID.FormattingEnabled = true;
+            this.cmbFilmID.Location = new System.Drawing.Point(411, 371);
+            this.cmbFilmID.Name = "cmbFilmID";
+            this.cmbFilmID.Size = new System.Drawing.Size(211, 32);
+            this.cmbFilmID.TabIndex = 63;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(645, 371);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(159, 30);
+            this.btnSearch.TabIndex = 62;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // lbFilmIDSearch
+            // 
+            this.lbFilmIDSearch.AutoSize = true;
+            this.lbFilmIDSearch.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFilmIDSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbFilmIDSearch.Location = new System.Drawing.Point(294, 376);
+            this.lbFilmIDSearch.Name = "lbFilmIDSearch";
+            this.lbFilmIDSearch.Size = new System.Drawing.Size(68, 22);
+            this.lbFilmIDSearch.TabIndex = 61;
+            this.lbFilmIDSearch.Text = "Mã Phim";
+            // 
+            // lbFilmID
+            // 
+            this.lbFilmID.AutoSize = true;
+            this.lbFilmID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFilmID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbFilmID.Location = new System.Drawing.Point(256, 181);
+            this.lbFilmID.Name = "lbFilmID";
+            this.lbFilmID.Size = new System.Drawing.Size(77, 24);
+            this.lbFilmID.TabIndex = 64;
+            this.lbFilmID.Text = "Mã Phim";
+            // 
+            // txtFilmID
+            // 
+            this.txtFilmID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilmID.Location = new System.Drawing.Point(364, 178);
+            this.txtFilmID.Name = "txtFilmID";
+            this.txtFilmID.Size = new System.Drawing.Size(221, 30);
+            this.txtFilmID.TabIndex = 65;
+            // 
+            // btnAddDB
+            // 
+            this.btnAddDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddDB.ForeColor = System.Drawing.Color.White;
+            this.btnAddDB.Location = new System.Drawing.Point(830, 369);
+            this.btnAddDB.Name = "btnAddDB";
+            this.btnAddDB.Size = new System.Drawing.Size(122, 32);
+            this.btnAddDB.TabIndex = 71;
+            this.btnAddDB.Text = "Thêm";
+            this.btnAddDB.Click += new System.EventHandler(this.btnAddDB_Click);
+            // 
+            // btnUpdateDB
+            // 
+            this.btnUpdateDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdateDB.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateDB.Location = new System.Drawing.Point(830, 369);
+            this.btnUpdateDB.Name = "btnUpdateDB";
+            this.btnUpdateDB.Size = new System.Drawing.Size(122, 32);
+            this.btnUpdateDB.TabIndex = 77;
+            this.btnUpdateDB.Text = "Sửa";
+            this.btnUpdateDB.Click += new System.EventHandler(this.btnUpdateDB_Click);
+            // 
+            // btnDeleteDB
+            // 
+            this.btnDeleteDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeleteDB.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDB.Location = new System.Drawing.Point(830, 369);
+            this.btnDeleteDB.Name = "btnDeleteDB";
+            this.btnDeleteDB.Size = new System.Drawing.Size(122, 32);
+            this.btnDeleteDB.TabIndex = 78;
+            this.btnDeleteDB.Text = "Xóa";
+            this.btnDeleteDB.Click += new System.EventHandler(this.btnDeleteDB_Click);
+            // 
             // frmFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1064, 442);
+            this.Controls.Add(this.btnDeleteDB);
+            this.Controls.Add(this.btnUpdateDB);
+            this.Controls.Add(this.btnAddDB);
+            this.Controls.Add(this.txtFilmID);
+            this.Controls.Add(this.lbFilmID);
+            this.Controls.Add(this.cmbFilmID);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.lbFilmIDSearch);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtpDate);
@@ -267,7 +388,7 @@
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.lbName);
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "frmFilm";
             this.Text = "frmFilm";
             this.Load += new System.EventHandler(this.frmFilm_Load);
@@ -298,5 +419,13 @@
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnChange;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private System.Windows.Forms.ComboBox cmbFilmID;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private System.Windows.Forms.Label lbFilmIDSearch;
+        private System.Windows.Forms.Label lbFilmID;
+        private System.Windows.Forms.TextBox txtFilmID;
+        private Guna.UI2.WinForms.Guna2Button btnAddDB;
+        private Guna.UI2.WinForms.Guna2Button btnUpdateDB;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteDB;
     }
 }

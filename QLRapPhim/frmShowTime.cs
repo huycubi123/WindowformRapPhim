@@ -31,7 +31,15 @@ namespace QLRapPhim
             txtCinema.Text = "";
             cmbCinemaID.Text = "";
             cmbFilmID.Text = "";
-            txtShowTimeID.Enabled = true;
+
+            txtShowTimeID.Enabled = false;
+            btnAddDB.Visible = false;
+            btnDeleteDB.Visible = false;
+            btnUpdateDB.Visible = false;
+            lbNote.Visible = true;
+            btnSearch.Visible = true;
+
+
         }
         public frmShowTime()
         {
@@ -48,6 +56,14 @@ namespace QLRapPhim
             dgvShowTime.Columns["Name"].HeaderText = "Tên Phim";
             dgvShowTime.Columns["CinemaID"].HeaderText = "Mã Rạp";
             dgvShowTime.Columns["CinemaName"].HeaderText = "Tên Rạp";
+
+            txtShowTimeID.Enabled = false;
+            btnAddDB.Visible = false;
+            btnDeleteDB.Visible = false;
+            btnUpdateDB.Visible = false;
+            lbNote.Visible = true;
+            btnSearch.Visible = true;
+
             foreach (DataGridViewColumn column in dgvShowTime.Columns)
             {
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -96,65 +112,30 @@ namespace QLRapPhim
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            if (txtCinema.Text == "" || txtFilm.Text == "" || txtShowTimeID.Text == "" || cmbCinemaID.Text == "" || cmbFilmID.Text == "" || dtpShowTime.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
-            }
-            else
-            {
-                string query = "Select * from tblShowtime where ShowtimeID = '" + txtShowTimeID.Text + "' or (CinemaID = '" + cmbCinemaID.Text + "' and Showtime = '" + dtpShowTime.Text + "')";
-                DataTable dt = process.ReadDatabase(query);
-                if (dt.Rows.Count != 0)
-                {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        if (txtShowTimeID.Text == dt.Rows[i]["ShowtimeID"].ToString())
-                        {
-                            MessageBox.Show("Lịch chiếu này đã tồn tại", "Thông báo", MessageBoxButtons.OK);
-                        }
-                    }
-                    MessageBox.Show("Lịch chiếu bị trùng", "Thông báo", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    process.ChangeDatabase("insert into tblShowtime (ShowtimeID, Showtime, FilmID, CinemaID) values ('" + txtShowTimeID.Text + "','" + dtpShowTime.Text + "','" + cmbFilmID.Text + "','" + cmbCinemaID.Text + "')");
-                    LoadData();
-                    Clear();
-                }
-            }
+            btnAddDB.Visible = true;
+            btnDeleteDB.Visible = false;
+            btnUpdateDB.Visible = false;
+            lbNote.Visible = false;
+            btnSearch.Visible = false;
         }
 
         private void btnChange_Click_1(object sender, EventArgs e)
         {
-            if (txtCinema.Text == "" || txtFilm.Text == "" || txtShowTimeID.Text == "" || cmbCinemaID.Text == "" || cmbFilmID.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
-            }
-            else
-            {
-                if (MessageBox.Show("Bạn có muốn sửa lịch chiếu " + txtShowTimeID.Text + " không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    process.ChangeDatabase("Update tblShowtime set Showtime = '" + dtpShowTime.Text + "', FilmID = '" + cmbFilmID.Text + "', CinemaID = '" + cmbCinemaID.Text + "' where ShowtimeID = '" + txtShowTimeID.Text + "'");
-                    LoadData();
-                }
-            }
+            
+            btnAddDB.Visible = false;
+            btnDeleteDB.Visible = false;
+            btnUpdateDB.Visible = true;
+            lbNote.Visible = true;
+            btnSearch.Visible = true;
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            if (txtShowTimeID.Text == "")
-            {
-                MessageBox.Show("Vui lòng chọn một lịch chiếu để xóa", "Thông báo", MessageBoxButtons.OK);
-            }
-            else
-            {
-                if (MessageBox.Show("Bạn có muốn xóa lịch chiếu " + txtShowTimeID.Text + " không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    DataTable dt = process.ReadDatabase("Select ShowtimeID From tblShowtime where ShowtimeID = '" + txtShowTimeID.Text + "'");
-                    process.ChangeDatabase("Delete from tblShowtime where ShowtimeID = '" + txtShowTimeID.Text + "'");
-                    LoadData();
-                }
-            }
+            btnAddDB.Visible = false;
+            btnDeleteDB.Visible = true;
+            btnUpdateDB.Visible = false;
+            lbNote.Visible = true;
+            btnSearch.Visible = true;
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
@@ -193,5 +174,56 @@ namespace QLRapPhim
             LoadData();
         }
 
+        private void btnAddDB_Click(object sender, EventArgs e)
+        {
+            if (txtCinema.Text == "" || txtFilm.Text == "" || txtShowTimeID.Text == "" || cmbCinemaID.Text == "" || cmbFilmID.Text == "" || dtpShowTime.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+            }
+            else
+            {
+                string query = "Select ShowtimeID from tblShowtime where ";
+                DataTable dt = process.ReadDatabase(query);
+                
+
+                process.ChangeDatabase("insert into tblShowtime (ShowtimeID, Showtime, FilmID, CinemaID) values ('" + txtShowTimeID.Text + "','" + dtpShowTime.Text + "','" + cmbFilmID.Text + "','" + cmbCinemaID.Text + "')");
+                LoadData();
+                Clear();
+                
+            }
+        }
+
+        private void btnUpdateDB_Click(object sender, EventArgs e)
+        {
+            if (txtCinema.Text == "" || txtFilm.Text == "" || txtShowTimeID.Text == "" || cmbCinemaID.Text == "" || cmbFilmID.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+            }
+            else
+            {
+                if (MessageBox.Show("Bạn có muốn sửa lịch chiếu " + txtShowTimeID.Text + " không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    process.ChangeDatabase("Update tblShowtime set Showtime = '" + dtpShowTime.Text + "', FilmID = '" + cmbFilmID.Text + "', CinemaID = '" + cmbCinemaID.Text + "' where ShowtimeID = '" + txtShowTimeID.Text + "'");
+                    LoadData();
+                }
+            }
+        }
+
+        private void btnDeleteDB_Click(object sender, EventArgs e)
+        {
+            if (txtShowTimeID.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn một lịch chiếu để xóa", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                if (MessageBox.Show("Bạn có muốn xóa lịch chiếu " + txtShowTimeID.Text + " không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    DataTable dt = process.ReadDatabase("Select ShowtimeID From tblShowtime where ShowtimeID = '" + txtShowTimeID.Text + "'");
+                    process.ChangeDatabase("Delete from tblShowtime where ShowtimeID = '" + txtShowTimeID.Text + "'");
+                    LoadData();
+                }
+            }
+        }
     }
 }

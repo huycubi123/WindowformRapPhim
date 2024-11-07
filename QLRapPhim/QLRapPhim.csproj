@@ -93,6 +93,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,11 +118,23 @@
     <Compile Include="frmCinema.Designer.cs">
       <DependentUpon>frmCinema.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCRevenue.Designer.cs">
+      <DependentUpon>frmCRevenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFilm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmFilm.Designer.cs">
       <DependentUpon>frmFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFRevenue.Designer.cs">
+      <DependentUpon>frmFRevenue.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -155,8 +168,14 @@
     <EmbeddedResource Include="frmCinema.resx">
       <DependentUpon>frmCinema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCRevenue.resx">
+      <DependentUpon>frmCRevenue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFilm.resx">
       <DependentUpon>frmFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFRevenue.resx">
+      <DependentUpon>frmFRevenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

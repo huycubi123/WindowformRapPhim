@@ -58,7 +58,8 @@ create table tblTicket
 	TicketID nvarchar(50) primary key,
 	SeatNumber varchar(10),
 	TypeTicket varchar(10), --HSSV: hoc sinh sinh vien, C < 10 tuoi, N: vé bình thường 
-	ShowtimeID varchar(50)
+	ShowtimeID varchar(50),
+	Total int,
 	FOREIGN KEY (ShowtimeID) REFERENCES tblShowtime(ShowtimeID)
 	on update cascade
 );

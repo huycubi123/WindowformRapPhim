@@ -271,7 +271,7 @@
             // 
             this.cmbFilmID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFilmID.FormattingEnabled = true;
-            this.cmbFilmID.Location = new System.Drawing.Point(411, 371);
+            this.cmbFilmID.Location = new System.Drawing.Point(400, 359);
             this.cmbFilmID.Name = "cmbFilmID";
             this.cmbFilmID.Size = new System.Drawing.Size(211, 32);
             this.cmbFilmID.TabIndex = 63;
@@ -286,7 +286,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(645, 371);
+            this.btnSearch.Location = new System.Drawing.Point(634, 359);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(159, 30);
             this.btnSearch.TabIndex = 62;
@@ -298,7 +298,7 @@
             this.lbFilmIDSearch.AutoSize = true;
             this.lbFilmIDSearch.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFilmIDSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbFilmIDSearch.Location = new System.Drawing.Point(294, 376);
+            this.lbFilmIDSearch.Location = new System.Drawing.Point(283, 364);
             this.lbFilmIDSearch.Name = "lbFilmIDSearch";
             this.lbFilmIDSearch.Size = new System.Drawing.Size(68, 22);
             this.lbFilmIDSearch.TabIndex = 61;
@@ -332,7 +332,7 @@
             this.btnAddDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnAddDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddDB.ForeColor = System.Drawing.Color.White;
-            this.btnAddDB.Location = new System.Drawing.Point(830, 369);
+            this.btnAddDB.Location = new System.Drawing.Point(819, 357);
             this.btnAddDB.Name = "btnAddDB";
             this.btnAddDB.Size = new System.Drawing.Size(122, 32);
             this.btnAddDB.TabIndex = 71;
@@ -348,7 +348,7 @@
             this.btnUpdateDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnUpdateDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateDB.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateDB.Location = new System.Drawing.Point(830, 369);
+            this.btnUpdateDB.Location = new System.Drawing.Point(819, 357);
             this.btnUpdateDB.Name = "btnUpdateDB";
             this.btnUpdateDB.Size = new System.Drawing.Size(122, 32);
             this.btnUpdateDB.TabIndex = 77;
@@ -364,7 +364,7 @@
             this.btnDeleteDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnDeleteDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteDB.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteDB.Location = new System.Drawing.Point(830, 369);
+            this.btnDeleteDB.Location = new System.Drawing.Point(819, 357);
             this.btnDeleteDB.Name = "btnDeleteDB";
             this.btnDeleteDB.Size = new System.Drawing.Size(122, 32);
             this.btnDeleteDB.TabIndex = 78;

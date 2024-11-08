@@ -47,61 +47,65 @@
             this.btnUpdateDB = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddDB = new Guna.UI2.WinForms.Guna2Button();
             this.cmbCinemaID = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbAmount = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCinema)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnTop.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvCinema
             // 
             this.dgvCinema.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCinema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCinema.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvCinema.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCinema.Location = new System.Drawing.Point(0, 0);
             this.dgvCinema.Name = "dgvCinema";
             this.dgvCinema.RowHeadersWidth = 51;
             this.dgvCinema.RowTemplate.Height = 24;
-            this.dgvCinema.Size = new System.Drawing.Size(531, 350);
+            this.dgvCinema.Size = new System.Drawing.Size(884, 133);
             this.dgvCinema.TabIndex = 1;
             this.dgvCinema.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCinema_CellContentClick);
             // 
             // lbCinemaID
             // 
             this.lbCinemaID.AutoSize = true;
-            this.lbCinemaID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCinemaID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCinemaID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbCinemaID.Location = new System.Drawing.Point(614, 23);
+            this.lbCinemaID.Location = new System.Drawing.Point(37, 25);
             this.lbCinemaID.Name = "lbCinemaID";
-            this.lbCinemaID.Size = new System.Drawing.Size(82, 23);
+            this.lbCinemaID.Size = new System.Drawing.Size(74, 24);
             this.lbCinemaID.TabIndex = 8;
             this.lbCinemaID.Text = "Mã Rạp";
             // 
             // lbCinemaName
             // 
             this.lbCinemaName.AutoSize = true;
-            this.lbCinemaName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCinemaName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCinemaName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbCinemaName.Location = new System.Drawing.Point(614, 89);
+            this.lbCinemaName.Location = new System.Drawing.Point(37, 91);
             this.lbCinemaName.Name = "lbCinemaName";
-            this.lbCinemaName.Size = new System.Drawing.Size(84, 23);
+            this.lbCinemaName.Size = new System.Drawing.Size(76, 24);
             this.lbCinemaName.TabIndex = 9;
             this.lbCinemaName.Text = "Tên Rạp";
             // 
             // lbAddress
             // 
             this.lbAddress.AutoSize = true;
-            this.lbAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddress.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbAddress.Location = new System.Drawing.Point(614, 155);
+            this.lbAddress.Location = new System.Drawing.Point(472, 25);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(82, 23);
+            this.lbAddress.Size = new System.Drawing.Size(69, 24);
             this.lbAddress.TabIndex = 10;
             this.lbAddress.Text = "Địa Chỉ";
             // 
             // txtCinemaID
             // 
             this.txtCinemaID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCinemaID.Location = new System.Drawing.Point(761, 20);
+            this.txtCinemaID.Location = new System.Drawing.Point(184, 22);
             this.txtCinemaID.Name = "txtCinemaID";
             this.txtCinemaID.Size = new System.Drawing.Size(241, 30);
             this.txtCinemaID.TabIndex = 14;
@@ -109,7 +113,7 @@
             // txtCinemaName
             // 
             this.txtCinemaName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCinemaName.Location = new System.Drawing.Point(761, 86);
+            this.txtCinemaName.Location = new System.Drawing.Point(184, 88);
             this.txtCinemaName.Name = "txtCinemaName";
             this.txtCinemaName.Size = new System.Drawing.Size(241, 30);
             this.txtCinemaName.TabIndex = 15;
@@ -117,7 +121,7 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(761, 152);
+            this.txtAddress.Location = new System.Drawing.Point(619, 22);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(241, 30);
             this.txtAddress.TabIndex = 16;
@@ -125,14 +129,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnChange);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1064, 92);
+            this.panel1.Size = new System.Drawing.Size(180, 442);
             this.panel1.TabIndex = 17;
             // 
             // btnCancel
@@ -147,7 +151,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnCancel.Location = new System.Drawing.Point(876, 27);
+            this.btnCancel.Location = new System.Drawing.Point(-1, 339);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(175, 40);
             this.btnCancel.TabIndex = 24;
@@ -167,7 +171,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageOffset = new System.Drawing.Point(-5, 0);
             this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdd.Location = new System.Drawing.Point(21, 27);
+            this.btnAdd.Location = new System.Drawing.Point(-1, 75);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(175, 40);
             this.btnAdd.TabIndex = 19;
@@ -186,7 +190,7 @@
             this.btnChange.ForeColor = System.Drawing.Color.White;
             this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
             this.btnChange.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnChange.Location = new System.Drawing.Point(306, 27);
+            this.btnChange.Location = new System.Drawing.Point(-1, 251);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(175, 40);
             this.btnChange.TabIndex = 21;
@@ -205,7 +209,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnDelete.Location = new System.Drawing.Point(591, 27);
+            this.btnDelete.Location = new System.Drawing.Point(-1, 163);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(175, 40);
             this.btnDelete.TabIndex = 22;
@@ -222,7 +226,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(618, 219);
+            this.btnSearch.Location = new System.Drawing.Point(513, 164);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(159, 30);
             this.btnSearch.TabIndex = 23;
@@ -232,11 +236,12 @@
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.pnTop.Controls.Add(this.btnDeleteDB);
+            this.pnTop.Controls.Add(this.txtAmount);
+            this.pnTop.Controls.Add(this.lbAmount);
             this.pnTop.Controls.Add(this.btnUpdateDB);
+            this.pnTop.Controls.Add(this.btnDeleteDB);
             this.pnTop.Controls.Add(this.btnAddDB);
             this.pnTop.Controls.Add(this.cmbCinemaID);
-            this.pnTop.Controls.Add(this.dgvCinema);
             this.pnTop.Controls.Add(this.btnSearch);
             this.pnTop.Controls.Add(this.txtCinemaID);
             this.pnTop.Controls.Add(this.txtAddress);
@@ -244,10 +249,9 @@
             this.pnTop.Controls.Add(this.txtCinemaName);
             this.pnTop.Controls.Add(this.lbCinemaName);
             this.pnTop.Controls.Add(this.lbAddress);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTop.Location = new System.Drawing.Point(0, 92);
+            this.pnTop.Location = new System.Drawing.Point(181, 132);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1064, 350);
+            this.pnTop.Size = new System.Drawing.Size(883, 310);
             this.pnTop.TabIndex = 18;
             // 
             // btnDeleteDB
@@ -259,7 +263,7 @@
             this.btnDeleteDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnDeleteDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteDB.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteDB.Location = new System.Drawing.Point(880, 284);
+            this.btnDeleteDB.Location = new System.Drawing.Point(388, 245);
             this.btnDeleteDB.Name = "btnDeleteDB";
             this.btnDeleteDB.Size = new System.Drawing.Size(122, 32);
             this.btnDeleteDB.TabIndex = 81;
@@ -275,7 +279,7 @@
             this.btnUpdateDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnUpdateDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateDB.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateDB.Location = new System.Drawing.Point(880, 284);
+            this.btnUpdateDB.Location = new System.Drawing.Point(157, 245);
             this.btnUpdateDB.Name = "btnUpdateDB";
             this.btnUpdateDB.Size = new System.Drawing.Size(122, 32);
             this.btnUpdateDB.TabIndex = 80;
@@ -291,7 +295,7 @@
             this.btnAddDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnAddDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddDB.ForeColor = System.Drawing.Color.White;
-            this.btnAddDB.Location = new System.Drawing.Point(880, 284);
+            this.btnAddDB.Location = new System.Drawing.Point(619, 245);
             this.btnAddDB.Name = "btnAddDB";
             this.btnAddDB.Size = new System.Drawing.Size(122, 32);
             this.btnAddDB.TabIndex = 79;
@@ -302,17 +306,46 @@
             // 
             this.cmbCinemaID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCinemaID.FormattingEnabled = true;
-            this.cmbCinemaID.Location = new System.Drawing.Point(821, 217);
+            this.cmbCinemaID.Location = new System.Drawing.Point(221, 162);
             this.cmbCinemaID.Name = "cmbCinemaID";
-            this.cmbCinemaID.Size = new System.Drawing.Size(181, 32);
+            this.cmbCinemaID.Size = new System.Drawing.Size(241, 32);
             this.cmbCinemaID.TabIndex = 64;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvCinema);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(180, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(884, 133);
+            this.panel2.TabIndex = 19;
+            // 
+            // lbAmount
+            // 
+            this.lbAmount.AutoSize = true;
+            this.lbAmount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbAmount.Location = new System.Drawing.Point(472, 91);
+            this.lbAmount.Name = "lbAmount";
+            this.lbAmount.Size = new System.Drawing.Size(144, 24);
+            this.lbAmount.TabIndex = 82;
+            this.lbAmount.Text = "Số Lượng Phòng";
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(619, 88);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(241, 30);
+            this.txtAmount.TabIndex = 83;
             // 
             // frmCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1064, 442);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.panel1);
             this.Name = "frmCinema";
@@ -322,6 +355,7 @@
             this.panel1.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -346,5 +380,8 @@
         private Guna.UI2.WinForms.Guna2Button btnAddDB;
         private Guna.UI2.WinForms.Guna2Button btnUpdateDB;
         private Guna.UI2.WinForms.Guna2Button btnDeleteDB;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.Label lbAmount;
     }
 }

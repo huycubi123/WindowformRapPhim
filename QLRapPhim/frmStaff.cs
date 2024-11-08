@@ -143,9 +143,9 @@ namespace QLRapPhim
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
             btnAddDB.Visible = false;
-            btnSearch.Visible = false;
-            lbMNVSearch.Visible = false;
-            cmbMNV.Visible = false;
+            btnSearch.Visible = true;
+            lbMNVSearch.Visible = true;
+            cmbMNV.Visible = true;
             btnUpdateDB.Visible = false;
             btnDeleteDB.Visible = false;
             Cancel();

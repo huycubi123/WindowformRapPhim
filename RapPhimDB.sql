@@ -127,6 +127,17 @@ insert tblShowRoom (RoomID,CinemaID) values ('SKCGP01','SKPCG')
 insert tblShowRoom (RoomID,CinemaID) values ('SKPCG02','SKPCG')
 insert tblShowRoom (RoomID,CinemaID) values ('SKPCG03','SKPCG')
 
+insert tblShowRoom (RoomID,CinemaID) values ('SKPNT01','SKPNT')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPNT02','SKPNT')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPNT03','SKPNT')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPNT04','SKPNT')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPNT05','SKPNT')
+
+insert tblShowRoom (RoomID,CinemaID) values ('SKPHD01','SKPHD')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPHD02','SKPHD')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPHD03','SKPHD')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPHD04','SKPHD')
+
 
 --insert Showtime
 insert tblShowtime (ShowtimeID,FilmID,CinemaID,Showtime,RoomID) values ('ST1','PB','SKPGP','11-11-2024 18:00:00','SKPGP01')

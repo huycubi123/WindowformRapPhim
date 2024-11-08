@@ -24,6 +24,7 @@ namespace QLRapPhim
             txtCinemaName.Text = "";
             txtAddress.Text = "";
             cmbCinemaID.Text = "";
+            txtAmount.Text = "";
 
             DataTable dt = process.ReadDatabase("Select * From tblCinema");
             dgvCinema.DataSource = dt;
@@ -49,6 +50,7 @@ namespace QLRapPhim
             txtCinemaName.Text = "";
             txtAddress.Text = "";
             cmbCinemaID.Text = "";
+            txtAmount.Text = "";
         }
         public frmCinema()
         {
@@ -58,11 +60,11 @@ namespace QLRapPhim
         private void frmCinema_Load(object sender, EventArgs e)
         {
             txtCinemaID.Enabled = false;
-            btnAddDB.Visible = false;
-            btnUpdateDB.Visible = false;
-            btnDeleteDB.Visible = false;
-            btnSearch.Visible = true;
-            cmbCinemaID.Visible = true;
+            btnAddDB.Enabled = false;
+            btnUpdateDB.Enabled = false;
+            btnDeleteDB.Enabled = false;
+            btnSearch.Enabled = true;
+            cmbCinemaID.Enabled = true;
             LoadData();
         }
 
@@ -78,32 +80,34 @@ namespace QLRapPhim
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
+            Cancel();
+
             txtCinemaID.Enabled = true;
-            btnAddDB.Visible = true;
-            btnUpdateDB.Visible = false;
-            btnDeleteDB.Visible = false;
-            btnSearch.Visible = false;
-            cmbCinemaID.Visible = false;
+            btnAddDB.Enabled = true;
+            btnUpdateDB.Enabled = false;
+            btnDeleteDB.Enabled = false;
+            btnSearch.Enabled = false;
+            cmbCinemaID.Enabled = false;
         }
 
         private void btnChange_Click_1(object sender, EventArgs e)
         {
             txtCinemaID.Enabled = false;
-            btnAddDB.Visible = false;
-            btnUpdateDB.Visible = true;
-            btnDeleteDB.Visible = false;
-            btnSearch.Visible = true;
-            cmbCinemaID.Visible = true;
+            btnAddDB.Enabled = false;
+            btnUpdateDB.Enabled = true;
+            btnDeleteDB.Enabled = false;
+            btnSearch.Enabled = true;
+            cmbCinemaID.Enabled = true;
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             txtCinemaID.Enabled=false;
-            btnAddDB.Visible = false;
-            btnUpdateDB.Visible = false;
-            btnDeleteDB.Visible = true;
-            btnSearch.Visible = true;
-            cmbCinemaID.Visible = true;
+            btnAddDB.Enabled = false;
+            btnUpdateDB.Enabled = false;
+            btnDeleteDB.Enabled = true;
+            btnSearch.Enabled = true;
+            cmbCinemaID.Enabled = true;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -116,6 +120,7 @@ namespace QLRapPhim
             else
             {
                 DataTable dt = process.ReadDatabase("Select * From tblCinema Where CinemaID = '" + cmbCinemaID.Text + "'");
+                DataTable dtam = process.ReadDatabase("Select Count(RoomID) as amount From tblShowRoom where CinemaID = '" + cmbCinemaID.SelectedItem.ToString() + "'");
                 if(dt.Rows.Count == 0)
                 {
                     MessageBox.Show("Rạp phim không tồn tại", "Thông báo", MessageBoxButtons.OK);
@@ -136,6 +141,7 @@ namespace QLRapPhim
                     txtCinemaID.Text = dt.Rows[0]["CinemaID"].ToString();
                     txtCinemaName.Text = dt.Rows[0]["CinemaName"].ToString();
                     txtAddress.Text = dt.Rows[0]["Address"].ToString();
+                    txtAmount.Text = dtam.Rows[0]["amount"].ToString();
                 }
             }    
         }
@@ -143,6 +149,13 @@ namespace QLRapPhim
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
             Cancel();
+
+            txtCinemaID.Enabled = false;
+            btnAddDB.Enabled = false;
+            btnUpdateDB.Enabled = false;
+            btnDeleteDB.Enabled = false;
+            btnSearch.Enabled = true;
+            cmbCinemaID.Enabled = true;
 
         }
 
@@ -159,6 +172,11 @@ namespace QLRapPhim
                 if (dt.Rows.Count == 0)
                 {
                     process.ChangeDatabase("insert into tblCinema (CinemaID,CinemaName,Address) values ('" + txtCinemaID.Text + "',N'" + txtCinemaName.Text + "',N'" + txtAddress.Text + "')");
+                    for (int i = 1; i <= Convert.ToInt32(txtAmount.Text); i++)
+                    {
+                        string room = txtCinemaID.Text + i.ToString().PadLeft(2,'0');
+                        process.ChangeDatabase("insert into tblShowRoom (RoomID, CinemaID) values ('" + room + "','" + txtCinemaID.Text + "')");
+                    }
                     LoadData();
                 }
                 else

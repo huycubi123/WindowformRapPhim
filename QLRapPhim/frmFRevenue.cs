@@ -15,7 +15,7 @@ namespace QLRapPhim
     {
 
         private DataProcess process = new DataProcess();
-        private string query = @"select SUM(t.Total) as Revenue,MONTH(PaymentDate) as Month
+        private string query = @"select SUM(FinalPrice) as Revenue,MONTH(PaymentDate) as Month
                                     from tblTicket t inner join tblShowtime s on t.ShowtimeID = s.ShowtimeID
                                     inner join tblInvoice i on t.InvoiceID = i.InvoiceID
                                     inner join tblFilm f on f.FilmID = s.FilmID
@@ -61,7 +61,7 @@ namespace QLRapPhim
                 chart1.Update();
             }else
             {
-                DataTable dtf = process.ReadDatabase(@"select SUM(t.Total) as Revenue,MONTH(PaymentDate) as Month
+                DataTable dtf = process.ReadDatabase(@"select SUM(FinalPrice) as Revenue,MONTH(PaymentDate) as Month
                                     from tblTicket t inner join tblShowtime s on t.ShowtimeID = s.ShowtimeID
                                     inner join tblInvoice i on t.InvoiceID = i.InvoiceID
                                     inner join tblFilm f on f.FilmID = s.FilmID

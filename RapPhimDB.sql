@@ -64,7 +64,6 @@ create table tblShowtime
 );
 
 
-
 create table tblInvoice
 (
 	InvoiceID nvarchar(50) PRIMARY key,
@@ -90,7 +89,8 @@ create table tblTicket
 	SeatID nvarchar(50),
 	TypeTicket varchar(10), --HSSV: hoc sinh sinh vien, C < 10 tuoi, N: vé bình thường 
 	ShowtimeID varchar(50),
-	InvoiceID nvarchar(50)
+	InvoiceID nvarchar(50),
+	FinalPrice int,
 	FOREIGN KEY (ShowtimeID) REFERENCES tblShowtime(ShowtimeID),
 	FOREIGN KEY (InvoiceID) REFERENCES tblInvoice(InvoiceID),
 	FOREIGN KEY (SeatID) REFERENCES tblSeat(SeatID)

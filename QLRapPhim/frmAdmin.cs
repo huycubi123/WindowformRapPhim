@@ -68,5 +68,20 @@ namespace QLRapPhim
         {
             OpenChilForm(new frmCinema());
         }
+
+        private void phToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new frmShowRoom());
+        }
+
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new frmFRevenue());
+        }
+
+        private void doanhThuToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenChilForm(new frmFRevenue());
+        }
     }
 }

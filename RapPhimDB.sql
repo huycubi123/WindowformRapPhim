@@ -19,7 +19,6 @@ CREATE TABLE tblCinema (
 
 CREATE TABLE tblShowRoom (
     RoomID nvarchar(50) primary key,
-    RoomName NVARCHAR(50) NOT NULL,
 	CinemaID varchar(20)
 	FOREIGN KEY (CinemaID) REFERENCES tblCinema(CinemaID),
 );
@@ -79,6 +78,7 @@ create table tblInvoice
 
 CREATE TABLE tblSeat (
     SeatID nvarchar(50) primary key,
+	Status int,
 	RoomID nvarchar(50)
     FOREIGN KEY (RoomID) REFERENCES tblShowRoom(RoomID),
 );

@@ -63,6 +63,7 @@
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
+            this.lbTitle.BackColor = System.Drawing.Color.LightGray;
             this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbTitle.Location = new System.Drawing.Point(835, 9);
@@ -73,7 +74,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -159,15 +160,15 @@
             // 
             this.nhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.danhSáchNhânViênToolStripMenuItem});
-            this.nhânViênToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhânViênToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(100, 60);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(126, 60);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
             // 
             // danhSáchNhânViênToolStripMenuItem
             // 
             this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
-            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(256, 28);
+            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(310, 28);
             this.danhSáchNhânViênToolStripMenuItem.Text = "Danh Sách Nhân Viên";
             this.danhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchNhânViênToolStripMenuItem_Click);
             // 
@@ -182,24 +183,24 @@
             // 
             // thoátToolStripMenuItem1
             // 
-            this.thoátToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.thoátToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.thoátToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.thoátToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.thoátToolStripMenuItem1.Name = "thoátToolStripMenuItem1";
-            this.thoátToolStripMenuItem1.Size = new System.Drawing.Size(195, 28);
+            this.thoátToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
             this.thoátToolStripMenuItem1.Text = "Thoát";
             this.thoátToolStripMenuItem1.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
-            this.đăngXuấtToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.đăngXuấtToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(195, 28);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             // 
             // pnMain
             // 
-            this.pnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.pnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(0, 64);
             this.pnMain.Name = "pnMain";
@@ -210,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1082, 553);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnTop);

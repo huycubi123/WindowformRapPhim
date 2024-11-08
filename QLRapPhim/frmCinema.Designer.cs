@@ -43,10 +43,10 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.btnDeleteDB = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateDB = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddDB = new Guna.UI2.WinForms.Guna2Button();
             this.cmbCinemaID = new System.Windows.Forms.ComboBox();
-            this.btnUpdateDB = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDeleteDB = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCinema)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnTop.SuspendLayout();
@@ -124,6 +124,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnChange);
@@ -141,6 +142,7 @@
             this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
@@ -159,6 +161,7 @@
             this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
@@ -178,6 +181,7 @@
             this.btnChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnChange.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnChange.ForeColor = System.Drawing.Color.White;
             this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
@@ -196,6 +200,7 @@
             this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
@@ -213,6 +218,7 @@
             this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
@@ -225,6 +231,7 @@
             // 
             // pnTop
             // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.pnTop.Controls.Add(this.btnDeleteDB);
             this.pnTop.Controls.Add(this.btnUpdateDB);
             this.pnTop.Controls.Add(this.btnAddDB);
@@ -243,12 +250,45 @@
             this.pnTop.Size = new System.Drawing.Size(1064, 350);
             this.pnTop.TabIndex = 18;
             // 
+            // btnDeleteDB
+            // 
+            this.btnDeleteDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
+            this.btnDeleteDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeleteDB.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDB.Location = new System.Drawing.Point(880, 284);
+            this.btnDeleteDB.Name = "btnDeleteDB";
+            this.btnDeleteDB.Size = new System.Drawing.Size(122, 32);
+            this.btnDeleteDB.TabIndex = 81;
+            this.btnDeleteDB.Text = "Xóa";
+            this.btnDeleteDB.Click += new System.EventHandler(this.btnDeleteDB_Click);
+            // 
+            // btnUpdateDB
+            // 
+            this.btnUpdateDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
+            this.btnUpdateDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdateDB.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateDB.Location = new System.Drawing.Point(880, 284);
+            this.btnUpdateDB.Name = "btnUpdateDB";
+            this.btnUpdateDB.Size = new System.Drawing.Size(122, 32);
+            this.btnUpdateDB.TabIndex = 80;
+            this.btnUpdateDB.Text = "Sửa";
+            this.btnUpdateDB.Click += new System.EventHandler(this.btnUpdateDB_Click);
+            // 
             // btnAddDB
             // 
             this.btnAddDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(166)))), ((int)(((byte)(35)))));
             this.btnAddDB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddDB.ForeColor = System.Drawing.Color.White;
             this.btnAddDB.Location = new System.Drawing.Point(880, 284);
@@ -266,36 +306,6 @@
             this.cmbCinemaID.Name = "cmbCinemaID";
             this.cmbCinemaID.Size = new System.Drawing.Size(181, 32);
             this.cmbCinemaID.TabIndex = 64;
-            // 
-            // btnUpdateDB
-            // 
-            this.btnUpdateDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdateDB.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateDB.Location = new System.Drawing.Point(880, 284);
-            this.btnUpdateDB.Name = "btnUpdateDB";
-            this.btnUpdateDB.Size = new System.Drawing.Size(122, 32);
-            this.btnUpdateDB.TabIndex = 80;
-            this.btnUpdateDB.Text = "Sửa";
-            this.btnUpdateDB.Click += new System.EventHandler(this.btnUpdateDB_Click);
-            // 
-            // btnDeleteDB
-            // 
-            this.btnDeleteDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeleteDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeleteDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDeleteDB.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteDB.Location = new System.Drawing.Point(880, 284);
-            this.btnDeleteDB.Name = "btnDeleteDB";
-            this.btnDeleteDB.Size = new System.Drawing.Size(122, 32);
-            this.btnDeleteDB.TabIndex = 81;
-            this.btnDeleteDB.Text = "Xóa";
-            this.btnDeleteDB.Click += new System.EventHandler(this.btnDeleteDB_Click);
             // 
             // frmCinema
             // 

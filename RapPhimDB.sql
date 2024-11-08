@@ -13,7 +13,6 @@ create table tblUser(
 CREATE TABLE tblCinema (
     CinemaID varchar(20) primary key,
     CinemaName NVARCHAR(50) NOT NULL,
-	Amount int,
     Address NVARCHAR(100)
 );
 
@@ -76,33 +75,33 @@ create table tblInvoice
 	on update cascade
 );
 
-CREATE TABLE tblSeat (
-    SeatID nvarchar(50) primary key,
-	Status int,
-	RoomID nvarchar(50)
-    FOREIGN KEY (RoomID) REFERENCES tblShowRoom(RoomID),
-);
+--CREATE TABLE tblSeat (
+--	SeatID int IDENTITY(1,1) primary key,
+--    SeatName nvarchar(50),
+--	Status int,
+--	RoomID nvarchar(50),
+--    FOREIGN KEY (RoomID) REFERENCES tblShowRoom(RoomID),
+--);
 
 create table tblTicket
 (
 	TicketID nvarchar(50) primary key,
-	SeatID nvarchar(50),
 	TypeTicket varchar(10), --HSSV: hoc sinh sinh vien, C < 10 tuoi, N: vé bình thường 
 	ShowtimeID varchar(50),
 	InvoiceID nvarchar(50),
+	Seat nvarchar(10),
 	FinalPrice int,
 	FOREIGN KEY (ShowtimeID) REFERENCES tblShowtime(ShowtimeID),
-	FOREIGN KEY (InvoiceID) REFERENCES tblInvoice(InvoiceID),
-	FOREIGN KEY (SeatID) REFERENCES tblSeat(SeatID)
+	FOREIGN KEY (InvoiceID) REFERENCES tblInvoice(InvoiceID)
 	on update cascade
 );
 
 
 --insert tblCinema
-insert tblCinema (CinemaID,CinemaName,Amount,Address) values (N'SKPGP',N'Skope Giải Phóng',5,N'67-Định Công-Hoàng Mai-Hà Nội')
-insert tblCinema (CinemaID,CinemaName,Amount,Address) values (N'SKPNT',N'Skope Nguyễn Trãi',6,N'120-Nguyễn Trãi-Thanh Xuân-Hà Nội')
-insert tblCinema (CinemaID,CinemaName,Amount,Address) values (N'SKPCG',N'Skope Cầu Giấy',5,N'3-Cầu Giấy-Đống Đa-Hà Nội')
-insert tblCinema (CinemaID,CinemaName,Amount,Address) values (N'SKPHD',N'Skope Hải Dương',4,N'158-Ngô Quyền-Hải Dương')
+insert tblCinema (CinemaID,CinemaName,Address) values (N'SKPGP',N'Skope Giải Phóng',N'67-Định Công-Hoàng Mai-Hà Nội')
+insert tblCinema (CinemaID,CinemaName,Address) values (N'SKPNT',N'Skope Nguyễn Trãi',N'120-Nguyễn Trãi-Thanh Xuân-Hà Nội')
+insert tblCinema (CinemaID,CinemaName,Address) values (N'SKPCG',N'Skope Cầu Giấy',N'3-Cầu Giấy-Đống Đa-Hà Nội')
+insert tblCinema (CinemaID,CinemaName,Address) values (N'SKPHD',N'Skope Hải Dương',N'158-Ngô Quyền-Hải Dương')
 --insert tblStaff
 insert tblStaff (StaffID,Name,Password,Type_Account) values ('Admin','admin','admin','Admin')
 insert tblStaff (StaffID,Name,Gender,BirthDay,NumberPhone,WorkStartDate,Password,Type_Account,CinemaID) values (N'NV001',N'Nguyễn Thế Định',N'Nam','5-18-2004','0984983258','2-25-2024','123','Staff','SKPHD')
@@ -118,9 +117,20 @@ insert tblFilm (FilmID,Name,Language,Director,ProductionDate,Price,Status) value
 insert tblFilm (FilmID,Name,Language,Director,ProductionDate,Price,Status) values (N'BWY',N'Be With You',N'Tiếng Hàn',N'Lee Jang-hoon','3-14-2018',70000,N'Đang Chiếu')
 insert tblFilm (FilmID,Name,Language,Director,ProductionDate,Price,Status) values (N'NBN',N'Nhà Bà Nữ',N'Tiếng Việt',N'Trấn Thành','1-11-2023',80000,N'Ngừng Chiếu')
 insert tblFilm (FilmID,Name,Language,Director,ProductionDate,Price,Status) values (N'EVT',N'Em Và Trịnh',N'Tiếng Việt',N'Phan Gia Nhật Linh','6-10-2022',70000,N'Đang Chiếu')
+--insert ShowRoom
+insert tblShowRoom (RoomID,CinemaID) values ('SKPGP01','SKPGP')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPGP02','SKPGP')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPGP03','SKPGP')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPGP04','SKPGP')
+
+insert tblShowRoom (RoomID,CinemaID) values ('SKCGP01','SKPCG')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPCG02','SKPCG')
+insert tblShowRoom (RoomID,CinemaID) values ('SKPCG03','SKPCG')
+
+
 --insert Showtime
-insert tblShowtime (ShowtimeID,FilmID,CinemaID,Showtime) values ('PB-SKPGP-31102024-2000','PB','SKPGP','10-31-2024 20:00:00')
-insert tblShowtime (ShowtimeID,FilmID,CinemaID,Showtime) values ('CC-SKPCG-11012024-1930','CC','SKPGP','11-1-2024 19:30:00')
+insert tblShowtime (ShowtimeID,FilmID,CinemaID,Showtime,RoomID) values ('ST1','PB','SKPGP','11-11-2024 18:00:00','SKPGP01')
+insert tblShowtime (ShowtimeID,FilmID,CinemaID,Showtime,RoomID) values ('ST2','CC','SKPGP','11-11-2024 18:00:00','SKPGP02')
 
 
 
